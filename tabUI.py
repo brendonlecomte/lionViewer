@@ -35,7 +35,12 @@ class searchTab(QWidget):
         self.layout.addWidget(self.searchResult)
 
     def textChanged(self):
-        self.finder.search(self.searchBar.toPlainText())
+        text = self.searchBar.toPlainText()
+        if text is not "":
+            res = self.finder.search(text)
+            self.searchResult.clear()
+            for i in res:
+                self.searchResult.addItem(i['name'])
 
     def resizeEvent(self, event):
         size = self.parent.size()

@@ -1,4 +1,5 @@
 from datastore import dataStore
+from tinydb import Query
 
 class Search():
     def __init__(self):
@@ -6,5 +7,12 @@ class Search():
 
 
     def search(self,text):
-        print(text)
-        pass
+        q = Query()
+        return self.warehouse.runQuery(q.name.matches(text+'*'))
+
+
+if __name__ == '__main__':
+    s = Search()
+
+    test = "Burnt Oth"
+    print(s.search(test))

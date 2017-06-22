@@ -19,6 +19,14 @@ class dataStore():
                 break
         return res
 
+
+    def runQuery(self, q):
+        for storeName in self.stores:
+            res = self.stores[storeName].search(q)
+            if(res is not None):
+                break
+        return res
+
     def findByName(self, store, name):
         q = Query()
         return self.stores[store].search(q.name == name)
