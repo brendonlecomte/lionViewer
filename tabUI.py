@@ -1,5 +1,6 @@
 from PyQt5.QtWidgets import QWidget, QHBoxLayout, QVBoxLayout, QTabWidget, QTextBrowser, QListWidget, QTextEdit
 from PyQt5.QtCore import QRect
+from search import Search
 # from PyQt5.QtWebKitWidgets import QWebViewx
 
 class viewtab(QWidget):
@@ -22,17 +23,19 @@ class searchTab(QWidget):
         super().__init__()
         self.parent = parent
         self.initTab()
+        self.finder = Search()
 
     def initTab(self):
         self.setObjectName("Search")
         self.layout = QVBoxLayout(self)
-
         self.searchResult = QListWidget(self) 
         self.searchBar = QTextEdit(self)
-        
+        self.searchBar.textChanged.connect(self.textChanged)
         self.layout.addWidget(self.searchBar)
         self.layout.addWidget(self.searchResult)
 
+    def textChanged(self):
+        self.finder.search(self.searchBar.toPlainText())
 
     def resizeEvent(self, event):
         size = self.parent.size()
