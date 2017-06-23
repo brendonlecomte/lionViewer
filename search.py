@@ -8,7 +8,7 @@ class Search():
 
     def search(self,text):
         q = Query()
-        return self.warehouse.runQuery(q.name.matches(text+'*'))
+        return self.warehouse.runQuery(q.name.matches(text+'.*'))
 
 
 if __name__ == '__main__':

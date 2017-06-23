@@ -15,7 +15,7 @@ class Controller(QObject):
         self.itemSelected = pyqtSignal(str)
 
     def openTab(self, group, name):
-        obj = self.warehouse.findByName(group, name)
+        obj = self.warehouse.find(name)
         return obj
 
     def getAllStore(self, store):
@@ -63,7 +63,7 @@ class GMWindow(QWidget):
         self.dbTreeView.addGroup(self.itemGroup)
         self.dbTreeView.addGroup(self.spellGroup)
 
-        self.dataTabView = tabManager()
+        self.dataTabView = tabManager(self.controller)
         self.layout.addWidget(self.dataTabView)
         self.show()
 

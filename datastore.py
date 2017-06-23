@@ -11,20 +11,22 @@ class dataStore():
     def addStore(self, name, storePath):
         self.stores[name] = (TinyDB(storePath))
 
-    def find(self):
+    def find(self, name):
         q = Query()
+        res = []
         for storeName in self.stores:
-            res = self.stores[storeName].search(q.name == "Burnt Othur Fumes (Inhaled)")
-            if(res is not None):
-                break
+            out = self.stores[storeName].search(q.name == name)
+            if(out is not None):
+                res += out
         return res
 
 
     def runQuery(self, q):
+        res = []
         for storeName in self.stores:
-            res = self.stores[storeName].search(q)
-            if(res is not None):
-                break
+            out = self.stores[storeName].search(q)
+            if(out is not None):
+                res += out
         return res
 
     def findByName(self, store, name):

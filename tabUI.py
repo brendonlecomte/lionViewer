@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import QWidget, QHBoxLayout, QVBoxLayout, QTabWidget, QTextBrowser, QListWidget, QTextEdit
 from PyQt5.QtCore import QRect
 from search import Search
+import json
 # from PyQt5.QtWebKitWidgets import QWebViewx
 
 class viewtab(QWidget):
@@ -30,24 +31,36 @@ class searchTab(QWidget):
         self.searchResult = QListWidget(self) 
         self.searchBar = QTextEdit(self)
         self.searchBar.textChanged.connect(self.textChanged)
+        self.searchResult.doubleClicked.connect(self.open)
         self.layout.addWidget(self.searchBar)
         self.layout.addWidget(self.searchResult)
 
     def textChanged(self):
         text = self.searchBar.toPlainText()
+        self.searchResult.clear()
         if text is not "":
+            print(text)
             res = self.finder.search(text)
-            self.searchResult.clear()
+            
             for i in res:
                 self.searchResult.addItem(i['name'])
+
+    def open(self):
+        name = self.searchResult.currentItem().text()
+        # print(name)
+        obj = self.parent.controller.openTab("",name)
+        text = json.dumps(obj[0])
+        self.parent.openTab(name, text)
 
     def resizeEvent(self, event):
         size = self.parent.size()
 
+
 class tabManager(QTabWidget):
-    def __init__(self):
+    def __init__(self, controller):
         super().__init__()
         self.tabs =[]
+        self.controller = controller
         self.setTabsClosable(True)
         self.setObjectName("dataTabView")
         self.tabCloseRequested.connect(self.closeTab)
