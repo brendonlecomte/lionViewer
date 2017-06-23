@@ -11,7 +11,6 @@ class viewtab(QWidget):
 
     def initTab(self,name,text):
         self.setObjectName(name)
-        # self.dataTextView = QWebView(self)
         self.layout = QVBoxLayout(self)
         self.dataTextView = QTextBrowser(self)
         self.layout.addWidget(self.dataTextView) 
