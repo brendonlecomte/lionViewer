@@ -1,5 +1,8 @@
 from tinydb import TinyDB, Query
 
+def strSearch(str):
+    return "(?i)" + str + ".*"
+
 class dataStore():
     def __init__(self):
         self.data = TinyDB("data/data.json")
@@ -13,11 +16,11 @@ class dataStore():
 
     def findByName(self, name):
         q = Query()
-        return self.runQuery(q.name.matches("(?i)"+name+".*")) 
+        return self.runQuery(q.name.matches(strSearch(name))) 
 
     def findByType(self, type, name=""):
         q = Query()
-        return self.runQuery((q.name.matches("(?i)"+name+".*")) & (q.object_type == type))
+        return self.runQuery((q.name.matches(strSearch(name))) & (q.object_type == type))
 
 
 if __name__ == '__main__':
