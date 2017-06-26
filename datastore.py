@@ -1,6 +1,7 @@
 from tinydb import TinyDB, Query
 
 def strSearch(str):
+    """prepend case insensitive flag and append wildcare for regex"""
     return "(?i)" + str + ".*"
 
 class dataStore():
@@ -8,17 +9,23 @@ class dataStore():
         self.data = TinyDB("data/data.json")
 
     def runQuery(self, q):
+        """execute a query"""
         return self.data.search(q)
        
     def getNamed(self, name):
+        """returns an exact name match of an object. Used for returning exact objects"""
         q = Query()
         return self.runQuery(q.name == name)
 
     def findByName(self, name):
+        """search DB by name, using case insensitive string and 
+        wild card after the string for completion"""
         q = Query()
         return self.runQuery(q.name.matches(strSearch(name))) 
 
     def findByType(self, type, name=""):
+        """ search for things by type (item, spell, monster) and by name.
+        Name is optional. This allows searches to be a bit more complex"""
         q = Query()
         return self.runQuery((q.name.matches(strSearch(name))) & (q.object_type == type))
 
