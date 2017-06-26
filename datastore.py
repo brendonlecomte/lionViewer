@@ -2,42 +2,28 @@ from tinydb import TinyDB, Query
 
 class dataStore():
     def __init__(self):
-        self.stores = {}
-        self.addStore('Items',"data/items.db")
-        self.addStore('Monsters',"data/monsters.db")
-        self.addStore('Spells',"data/spells.db")
-
-
-    def addStore(self, name, storePath):
-        self.stores[name] = (TinyDB(storePath))
-
-    def find(self, name):
-        q = Query()
-        res = []
-        for storeName in self.stores:
-            out = self.stores[storeName].search(q.name == name)
-            if(out is not None):
-                res += out
-        return res
-
+        self.data = TinyDB("data/data.json")
 
     def runQuery(self, q):
-        res = []
-        for storeName in self.stores:
-            out = self.stores[storeName].search(q)
-            if(out is not None):
-                res += out
-        return res
-
-    def findByName(self, store, name):
+        return self.data.search(q)
+       
+    def getNamed(self, name):
         q = Query()
-        return self.stores[store].search(q.name == name)
+        return self.runQuery(q.name == name)
 
-    def getByStore(self, store):
-        return self.stores[store].all()
+    def findByName(self, name):
+        q = Query()
+        return self.runQuery(q.name.matches("(?i)"+name+".*")) 
+
+    def findByType(self, type, name=""):
+        q = Query()
+        return self.runQuery((q.name.matches("(?i)"+name+".*")) & (q.object_type == type))
+
 
 if __name__ == '__main__':
     warehouse = dataStore()
-    res = warehouse.findByName('Items',"Burnt Othur Fumes (Inhaled)")
+    res = warehouse.findByName("An")
     print(len(res))
-    print(res)
+    res = warehouse.findByType("item")
+    print(len(res))
+    # print(res)

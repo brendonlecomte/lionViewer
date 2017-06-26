@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <compendium version="5">
   <item>
-		<name>10 GP - Azurite</name>
+		<name>Azurite</name>
 		<type>$</type>
         <magic />
 		<value>10gp</value>
@@ -11,7 +11,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>10 GP - Banded Agate</name>
+		<name>Banded Agate</name>
 		<type>$</type>
         <magic />
 		<value>10gp</value>
@@ -21,7 +21,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>10 GP - Blue Quartz</name>
+		<name>Blue Quartz</name>
 		<type>$</type>
         <magic />
 		<value>10gp</value>
@@ -31,7 +31,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>10 GP - Eye Agate</name>
+		<name>Eye Agate</name>
 		<type>$</type>
         <magic />
 		<value>10gp</value>
@@ -41,7 +41,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>10 GP - Hematite</name>
+		<name>Hematite</name>
 		<type>$</type>
         <magic />
 		<value>10gp</value>
@@ -51,7 +51,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>10 GP - Lapis Lazuli</name>
+		<name>Lapis Lazuli</name>
 		<type>$</type>
         <magic />
 		<value>10gp</value>
@@ -61,7 +61,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>10 GP - Malachite</name>
+		<name>Malachite</name>
 		<type>$</type>
         <magic />
 		<value>10gp</value>
@@ -71,7 +71,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>10 GP - Moss Agate</name>
+		<name>Moss Agate</name>
 		<type>$</type>
         <magic />
 		<value>10gp</value>
@@ -81,7 +81,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>10 GP - Obsidian</name>
+		<name>Obsidian</name>
 		<type>$</type>
         <magic />
 		<value>10gp</value>
@@ -91,7 +91,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>10 GP - Rhodochrosite</name>
+		<name>Rhodochrosite</name>
 		<type>$</type>
         <magic />
 		<value>10gp</value>
@@ -101,7 +101,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>10 GP - Tiger Eye</name>
+		<name>Tiger Eye</name>
 		<type>$</type>
         <magic />
 		<value>10gp</value>
@@ -111,7 +111,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>10 GP - Turquoise</name>
+		<name>Turquoise</name>
 		<type>$</type>
         <magic />
 		<value>10gp</value>
@@ -121,7 +121,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>100 GP - Amber</name>
+		<name>Amber</name>
 		<type>$</type>
         <magic />
 		<value>100gp</value>
@@ -131,7 +131,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>100 GP - Amethyst</name>
+		<name>Amethyst</name>
 		<type>$</type>
         <magic />
 		<value>100gp</value>
@@ -141,7 +141,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>100 GP - Chrysoberyl</name>
+		<name>Chrysoberyl</name>
 		<type>$</type>
         <magic />
 		<value>100gp</value>
@@ -151,7 +151,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>100 GP - Coral</name>
+		<name>Coral</name>
 		<type>$</type>
         <magic />
 		<value>100gp</value>
@@ -161,7 +161,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>100 GP - Garnet</name>
+		<name>Garnet</name>
 		<type>$</type>
         <magic />
 		<value>100gp</value>
@@ -171,7 +171,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>100 GP - Jade</name>
+		<name>Jade</name>
 		<type>$</type>
         <magic />
 		<value>100gp</value>
@@ -181,7 +181,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>100 GP - Jet</name>
+		<name>Jet</name>
 		<type>$</type>
         <magic />
 		<value>100gp</value>
@@ -191,7 +191,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>100 GP - Pearl</name>
+		<name>Pearl</name>
 		<type>$</type>
         <magic />
 		<value>100gp</value>
@@ -201,7 +201,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>100 GP - Spinel</name>
+		<name>Spinel</name>
 		<type>$</type>
         <magic />
 		<value>100gp</value>
@@ -211,7 +211,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>100 GP - Tourmaline</name>
+		<name>Tourmaline</name>
 		<type>$</type>
         <magic />
 		<value>100gp</value>
@@ -221,7 +221,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>1000 GP - Black Opal</name>
+		<name>Black Opal</name>
 		<type>$</type>
         <magic />
 		<value>1000gp</value>
@@ -231,7 +231,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>1000 GP - Blue Sapphire</name>
+		<name>Blue Sapphire</name>
 		<type>$</type>
         <magic />
 		<value>1000gp</value>
@@ -241,7 +241,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>1000 GP - Emerald</name>
+		<name>Emerald</name>
 		<type>$</type>
         <magic />
 		<value>1000gp</value>
@@ -251,7 +251,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>1000 GP - Fire Opal</name>
+		<name>Fire Opal</name>
 		<type>$</type>
         <magic />
 		<value>1000gp</value>
@@ -261,7 +261,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>1000 GP - Opal</name>
+		<name>Opal</name>
 		<type>$</type>
         <magic />
 		<value>1000gp</value>
@@ -271,7 +271,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>1000 GP - Star Ruby</name>
+		<name>Star Ruby</name>
 		<type>$</type>
         <magic />
 		<value>1000gp</value>
@@ -281,7 +281,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>1000 GP - Star Sapphire</name>
+		<name>Star Sapphire</name>
 		<type>$</type>
         <magic />
 		<value>1000gp</value>
@@ -291,7 +291,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>1000 GP - Yellow Sapphire</name>
+		<name>Yellow Sapphire</name>
 		<type>$</type>
         <magic />
 		<value>1000gp</value>
@@ -301,7 +301,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>25 GP - Black velvet mask stitched with silver thread</name>
+		<name>Black velvet mask stitched with silver thread</name>
 		<type>$</type>
         <magic />
 		<value>25gp</value>
@@ -311,7 +311,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>25 GP - Carved bone statuette</name>
+		<name>Carved bone statuette</name>
 		<type>$</type>
         <magic />
 		<value>25gp</value>
@@ -321,7 +321,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>25 GP - Cloth-of-gold vestments</name>
+		<name>Cloth-of-gold vestments</name>
 		<type>$</type>
         <magic />
 		<value>25gp</value>
@@ -331,7 +331,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>25 GP - Copper chalice with silver filigree</name>
+		<name>Copper chalice with silver filigree</name>
 		<type>$</type>
         <magic />
 		<value>25gp</value>
@@ -341,7 +341,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>25 GP - Embroidered silk handkerchief</name>
+		<name>Embroidered silk handkerchief</name>
 		<type>$</type>
         <magic />
 		<value>25gp</value>
@@ -351,7 +351,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>25 GP - Gold locket with a painted portrait inside</name>
+		<name>Gold locket with a painted portrait inside</name>
 		<type>$</type>
         <magic />
 		<value>25gp</value>
@@ -361,7 +361,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>25 GP - Pair of engraved bone dice</name>
+		<name>Pair of engraved bone dice</name>
 		<type>$</type>
         <magic />
 		<value>25gp</value>
@@ -371,7 +371,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>25 GP - Silver ewer</name>
+		<name>Silver ewer</name>
 		<type>$</type>
         <magic />
 		<value>25gp</value>
@@ -381,7 +381,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>25 GP - Small gold bracelet</name>
+		<name>Small gold bracelet</name>
 		<type>$</type>
         <magic />
 		<value>25gp</value>
@@ -391,7 +391,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>25 GP - Small mirror set in a painted wooden frame</name>
+		<name>Small mirror set in a painted wooden frame</name>
 		<type>$</type>
         <magic />
 		<value>25gp</value>
@@ -401,7 +401,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>250 GP - Box of turquoise animal figurines</name>
+		<name>Box of turquoise animal figurines</name>
 		<type>$</type>
         <magic />
 		<value>250gp</value>
@@ -411,7 +411,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>250 GP - Brass mug with jade inlay</name>
+		<name>Brass mug with jade inlay</name>
 		<type>$</type>
         <magic />
 		<value>250gp</value>
@@ -421,7 +421,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>250 GP - Bronze crown</name>
+		<name>Bronze crown</name>
 		<type>$</type>
         <magic />
 		<value>250gp</value>
@@ -431,7 +431,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>250 GP - Carved ivory statuette</name>
+		<name>Carved ivory statuette</name>
 		<type>$</type>
         <magic />
 		<value>250gp</value>
@@ -441,7 +441,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>250 GP - Gold bird cage with electrum filigree</name>
+		<name>Gold bird cage with electrum filigree</name>
 		<type>$</type>
         <magic />
 		<value>250gp</value>
@@ -451,7 +451,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>250 GP - Gold ring set with bloodstones</name>
+		<name>Gold ring set with bloodstones</name>
 		<type>$</type>
         <magic />
 		<value>250gp</value>
@@ -461,7 +461,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>250 GP - Large gold bracelet</name>
+		<name>Large gold bracelet</name>
 		<type>$</type>
         <magic />
 		<value>250gp</value>
@@ -471,7 +471,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>250 GP - Large well-made tapestry</name>
+		<name>Large well-made tapestry</name>
 		<type>$</type>
         <magic />
 		<value>250gp</value>
@@ -481,7 +481,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>250 GP - Silk robe with gold embroidery</name>
+		<name>Silk robe with gold embroidery</name>
 		<type>$</type>
         <magic />
 		<value>250gp</value>
@@ -491,7 +491,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>250 GP - Silver necklace with a gemstone pendant</name>
+		<name>Silver necklace with a gemstone pendant</name>
 		<type>$</type>
         <magic />
 		<value>250gp</value>
@@ -501,7 +501,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>2500 GP - A necklace string of small pink pearls</name>
+		<name>A necklace string of small pink pearls</name>
 		<type>$</type>
         <magic />
 		<value>2500gp</value>
@@ -511,7 +511,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>2500 GP - Embroidered glove set with jewel chips</name>
+		<name>Embroidered glove set with jewel chips</name>
 		<type>$</type>
         <magic />
 		<value>2500gp</value>
@@ -521,7 +521,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>2500 GP - Embroidered silk and velvet mantle set with numerous moonstones</name>
+		<name>Embroidered silk and velvet mantle set with numerous moonstones</name>
 		<type>$</type>
         <magic />
 		<value>2500gp</value>
@@ -531,7 +531,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>2500 GP - Eye patch with a mock eye set in blue sapphire and moonstone</name>
+		<name>Eye patch with a mock eye set in blue sapphire and moonstone</name>
 		<type>$</type>
         <magic />
 		<value>2500gp</value>
@@ -541,7 +541,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>2500 GP - Fine gold chain set with a fire opal</name>
+		<name>Fine gold chain set with a fire opal</name>
 		<type>$</type>
         <magic />
 		<value>2500gp</value>
@@ -551,7 +551,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>2500 GP - Gold circlet set with four aquamarines</name>
+		<name>Gold circlet set with four aquamarines</name>
 		<type>$</type>
         <magic />
 		<value>2500gp</value>
@@ -561,7 +561,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>2500 GP - Gold music box</name>
+		<name>Gold music box</name>
 		<type>$</type>
         <magic />
 		<value>2500gp</value>
@@ -571,7 +571,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>2500 GP - Jeweled anklet</name>
+		<name>Jeweled anklet</name>
 		<type>$</type>
         <magic />
 		<value>2500gp</value>
@@ -581,7 +581,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>2500 GP - Old masterpiece painting</name>
+		<name>Old masterpiece painting</name>
 		<type>$</type>
         <magic />
 		<value>2500gp</value>
@@ -591,7 +591,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>2500 GP - Platinum bracelet set with a sapphire</name>
+		<name>Platinum bracelet set with a sapphire</name>
 		<type>$</type>
         <magic />
 		<value>2500gp</value>
@@ -601,7 +601,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>50 GP - Bloodstone</name>
+		<name>Bloodstone</name>
 		<type>$</type>
         <magic />
 		<value>50gp</value>
@@ -611,7 +611,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>50 GP - Carnelian</name>
+		<name>Carnelian</name>
 		<type>$</type>
         <magic />
 		<value>50gp</value>
@@ -621,7 +621,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>50 GP - Chalcedony</name>
+		<name>Chalcedony</name>
 		<type>$</type>
         <magic />
 		<value>50gp</value>
@@ -631,7 +631,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>50 GP - Chrysoprase</name>
+		<name>Chrysoprase</name>
 		<type>$</type>
         <magic />
 		<value>50gp</value>
@@ -641,7 +641,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>50 GP - Citrine</name>
+		<name>Citrine</name>
 		<type>$</type>
         <magic />
 		<value>50gp</value>
@@ -651,7 +651,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>50 GP - Jasper</name>
+		<name>Jasper</name>
 		<type>$</type>
         <magic />
 		<value>50gp</value>
@@ -661,7 +661,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>50 GP - Moonstone</name>
+		<name>Moonstone</name>
 		<type>$</type>
         <magic />
 		<value>50gp</value>
@@ -671,7 +671,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>50 GP - Onyx</name>
+		<name>Onyx</name>
 		<type>$</type>
         <magic />
 		<value>50gp</value>
@@ -681,7 +681,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>50 GP - Quartz</name>
+		<name>Quartz</name>
 		<type>$</type>
         <magic />
 		<value>50gp</value>
@@ -691,7 +691,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>50 GP - Sardonyx</name>
+		<name>Sardonyx</name>
 		<type>$</type>
         <magic />
 		<value>50gp</value>
@@ -701,7 +701,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>50 GP - Star rose quartz</name>
+		<name>Star rose quartz</name>
 		<type>$</type>
         <magic />
 		<value>50gp</value>
@@ -711,7 +711,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>50 GP - Zircon</name>
+		<name>Zircon</name>
 		<type>$</type>
         <magic />
 		<value>50gp</value>
@@ -721,7 +721,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>500 GP - Alexandrite</name>
+		<name>Alexandrite</name>
 		<type>$</type>
         <magic />
 		<value>500gp</value>
@@ -731,7 +731,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>500 GP - Aquamarine</name>
+		<name>Aquamarine</name>
 		<type>$</type>
         <magic />
 		<value>500gp</value>
@@ -741,7 +741,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>500 GP - Black Pearl</name>
+		<name>Black Pearl</name>
 		<type>$</type>
         <magic />
 		<value>500gp</value>
@@ -751,7 +751,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>500 GP - Blue Spinel</name>
+		<name>Blue Spinel</name>
 		<type>$</type>
         <magic />
 		<value>500gp</value>
@@ -761,7 +761,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>500 GP - Peridot</name>
+		<name>Peridot</name>
 		<type>$</type>
         <magic />
 		<value>500gp</value>
@@ -771,7 +771,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>500 GP - Topaz</name>
+		<name>Topaz</name>
 		<type>$</type>
         <magic />
 		<value>500gp</value>
@@ -781,7 +781,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>5000 GP - Black Sapphire</name>
+		<name>Black Sapphire</name>
 		<type>$</type>
         <magic />
 		<value>5000gp</value>
@@ -791,7 +791,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>5000 GP - Diamond</name>
+		<name>Diamond</name>
 		<type>$</type>
         <magic />
 		<value>5000gp</value>
@@ -801,7 +801,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>5000 GP - Jacinth</name>
+		<name>Jacinth</name>
 		<type>$</type>
         <magic />
 		<value>5000gp</value>
@@ -811,7 +811,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>5000 GP - Ruby</name>
+		<name>Ruby</name>
 		<type>$</type>
         <magic />
 		<value>5000gp</value>
@@ -821,7 +821,7 @@
 		<text>Source: Dungeon Master's Guide, page 134</text>
 	</item>
 	<item>
-		<name>750 GP - Bottle stopper cork embossed with gold leaf and set with amethysts</name>
+		<name>Bottle stopper cork embossed with gold leaf and set with amethysts</name>
 		<type>$</type>
         <magic />
 		<value>750gp</value>
@@ -831,7 +831,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>750 GP - Carved harp of exotic wood with ivory inlay and zircon gems</name>
+		<name>Carved harp of exotic wood with ivory inlay and zircon gems</name>
 		<type>$</type>
         <magic />
 		<value>750gp</value>
@@ -841,7 +841,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>750 GP - Ceremonial electrum dagger with a black pearl in the pommel</name>
+		<name>Ceremonial electrum dagger with a black pearl in the pommel</name>
 		<type>$</type>
         <magic />
 		<value>750gp</value>
@@ -851,7 +851,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>750 GP - Gold dragon comb set with red garnets as eyes</name>
+		<name>Gold dragon comb set with red garnets as eyes</name>
 		<type>$</type>
         <magic />
 		<value>750gp</value>
@@ -861,7 +861,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>750 GP - Obsidian statuette with gold fittings and inlay</name>
+		<name>Obsidian statuette with gold fittings and inlay</name>
 		<type>$</type>
         <magic />
 		<value>750gp</value>
@@ -871,7 +871,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>750 GP - Painted gold war mask</name>
+		<name>Painted gold war mask</name>
 		<type>$</type>
         <magic />
 		<value>750gp</value>
@@ -881,7 +881,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>750 GP - Silver and gold brooch</name>
+		<name>Silver and gold brooch</name>
 		<type>$</type>
         <magic />
 		<value>750gp</value>
@@ -891,7 +891,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>750 GP - Silver chalice set with moonstones</name>
+		<name>Silver chalice set with moonstones</name>
 		<type>$</type>
         <magic />
 		<value>750gp</value>
@@ -901,7 +901,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>750 GP - Silver-plated steel longsword with jet set in hilt</name>
+		<name>Silver-plated steel longsword with jet set in hilt</name>
 		<type>$</type>
         <magic />
 		<value>750gp</value>
@@ -911,7 +911,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>750 GP - Small gold idol</name>
+		<name>Small gold idol</name>
 		<type>$</type>
         <magic />
 		<value>750gp</value>
@@ -921,7 +921,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>7500 GP - Bejeweled ivory drinking horn with gold filigree</name>
+		<name>Bejeweled ivory drinking horn with gold filigree</name>
 		<type>$</type>
         <magic />
 		<value>7500gp</value>
@@ -931,7 +931,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 <item>
-		<name>7500 GP - Gold cup set with emeralds</name>
+		<name>Gold cup set with emeralds</name>
 		<type>$</type>
         <magic />
 		<value>7500gp</value>
@@ -941,7 +941,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>7500 GP - Gold jewelry box with platinum filigree</name>
+		<name>Gold jewelry box with platinum filigree</name>
 		<type>$</type>
         <magic />
 		<value>7500gp</value>
@@ -951,7 +951,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>7500 GP - Jade game board with solid gold playing pieces</name>
+		<name>Jade game board with solid gold playing pieces</name>
 		<type>$</type>
         <magic />
 		<value>7500gp</value>
@@ -961,7 +961,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>7500 GP - Jeweled gold crown</name>
+		<name>Jeweled gold crown</name>
 		<type>$</type>
         <magic />
 		<value>7500gp</value>
@@ -971,7 +971,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>7500 GP - Jeweled platinum ring</name>
+		<name>Jeweled platinum ring</name>
 		<type>$</type>
         <magic />
 		<value>7500gp</value>
@@ -981,7 +981,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>7500 GP - Painted gold child's sarcophagus</name>
+		<name>Painted gold child's sarcophagus</name>
 		<type>$</type>
         <magic />
 		<value>7500gp</value>
@@ -991,7 +991,7 @@
 		<text>Source: Dungeon Master's Guide, page 135</text>
 	</item>
 	<item>
-		<name>7500 GP - Small gold statuette set with rubies</name>
+		<name>Small gold statuette set with rubies</name>
 		<type>$</type>
         <magic />
 		<value>7500gp</value>

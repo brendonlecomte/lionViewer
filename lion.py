@@ -14,35 +14,45 @@ class Controller(QObject):
         self.warehouse = dataStore()
         self.itemSelected = pyqtSignal(str)
 
-    def openTab(self, group, name):
-        obj = self.warehouse.find(name)
+    def getObject(self, name):
+        obj = self.warehouse.getNamed(name)
         return obj
 
-    def getAllStore(self, store):
-        return self.warehouse.getByStore(store)
+    def search(self, name):
+        return self.warehouse.findByName(name)
+
+    def getItems(self):
+        return self.warehouse.findByType("item")
+
+    def getSpells(self):
+        return self.warehouse.findByType("spell")
+
+    def getMonsters(self):
+        return self.warehouse.findByType("monster")
 
 class GMWindow(QWidget):
     def __init__(self):
         super().__init__()
         self.controller = Controller() #controller
-        self.initUI()   
-        # self.controller = Controller() #controller
+        self.initUI()
         self.dbTreeView.itemDoubleClicked.connect(self.openItem)
     
     def initTrees(self):
-        items = self.controller.getAllStore('Items')
-        print(len(items))
-        for i in items:
-            itm = treeItem(self.itemGroup, i['name'])
+        items = self.controller.getItems()
+        print("Items found: {}".format(len(items)))
+        self.addToTree(self.itemGroup, items)
 
-        monst = self.controller.getAllStore('Monsters')
-        print(len(monst))
-        for j in monst:
-            itm = treeItem(self.monsterGroup, j['name'])
-        spell = self.controller.getAllStore('Spells')
-        print(len(spell))
-        for k in spell:
-            itm = treeItem(self.spellGroup, k['name'])
+        monsters = self.controller.getMonsters()
+        print("Monsters found: {}".format(len(monsters)))
+        self.addToTree(self.monsterGroup, monsters)
+
+        spells = self.controller.getSpells()
+        print("Spells found: {}".format(len(spells)))
+        self.addToTree(self.spellGroup, spells)
+
+    def addToTree(self, group, items):
+        for item in items:
+            treeItem(group, item['name'])
 
     def initUI(self):
         self.resize(500, 500)
@@ -77,7 +87,7 @@ class GMWindow(QWidget):
         if(item.type() == 1002):
             name = item.text(0)
             parent = item.parent().text(0)
-            tab = self.controller.openTab(parent,name)
+            tab = self.controller.getObject(name)
             if(parent == 'Items'):
                 text = convertToItem(tab[0])
             else:
