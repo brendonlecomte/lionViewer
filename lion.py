@@ -3,18 +3,20 @@ import sys
 import json
 from datastore import dataStore
 from treeUI import treeGroup, treeItem, treeView
-from convertToReadable import convertToItem
+from convertToReadable import convertToItem, convertToMonster, convertToSpell
 from tabUI import tabManager
 from PyQt5.QtCore import QObject, pyqtSignal
 from PyQt5.QtWidgets import QApplication, QDesktopWidget, QWidget, QHBoxLayout
 
 class Controller(QObject):
+    """interface between DB and the UI"""
     def __init__(self):
         super().__init__()
         self.warehouse = dataStore()
         self.itemSelected = pyqtSignal(str)
 
     def getObject(self, name):
+        """gets an exact named object"""
         obj = self.warehouse.getNamed(name)
         return obj
 
@@ -29,6 +31,8 @@ class Controller(QObject):
 
     def getMonsters(self):
         return self.warehouse.findByType("monster")
+
+
 
 class GMWindow(QWidget):
     def __init__(self):
@@ -90,6 +94,10 @@ class GMWindow(QWidget):
             tab = self.controller.getObject(name)
             if(parent == 'Items'):
                 text = convertToItem(tab[0])
+            elif(parent == 'Monsters'):
+                text = convertToMonster(tab[0])
+            elif(parent == 'Spells'):
+                text = convertToSpell(tab[0])
             else:
                 text = json.dumps(tab[0])
             self.dataTabView.openTab(name, text)

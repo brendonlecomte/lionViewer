@@ -14,7 +14,7 @@ class viewtab(QWidget):
         self.layout = QVBoxLayout(self)
         self.dataTextView = QTextBrowser(self)
         self.layout.addWidget(self.dataTextView) 
-        self.dataTextView.setPlainText(text)
+        self.dataTextView.insertHtml(text)
 
 
 class searchTab(QWidget):
