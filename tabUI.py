@@ -37,7 +37,6 @@ class searchTab(QWidget):
         text = self.searchBar.toPlainText()
         self.searchResult.clear()
         if text is not "":
-            print(text)
             res = self.parent.controller.search(text)
             for i in res:
                 self.searchResult.addItem(i['name'])
@@ -45,7 +44,7 @@ class searchTab(QWidget):
     def _open(self):
         name = self.searchResult.currentItem().text()
         obj = self.parent.controller.getObject(name)
-        text = json.dumps(obj[0])
+        text = self.parent.controller.convertToUI(obj)
         self.parent.openTab(name, text)
 
     def resizeEvent(self, event):
@@ -60,6 +59,9 @@ class tabManager(QTabWidget):
         self.setTabsClosable(True)
         self.setObjectName("dataTabView")
         self.tabCloseRequested.connect(self.closeTab)
+
+    def closeCurrent(self):
+        self.closeTab(self.currentIndex())
 
     def closeTab(self, index):
         self.removeTab(index)
