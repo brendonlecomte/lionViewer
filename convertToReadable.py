@@ -58,6 +58,10 @@ def convertToItem(obj):
 
 def _statBlock(obj):
     str = """<p>"""
+
+    if(obj.get('cr') is not None):
+        str += "<b>CR</b>: {}<br/>".format(obj['cr'])
+    
     if(obj.get('ac') is not None):
         str += "<b>AC</b>: {}<br/>".format(obj['ac'])
     if(obj.get('hp') is not None):

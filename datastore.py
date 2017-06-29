@@ -1,8 +1,15 @@
 from tinydb import TinyDB, Query
 
+regexSpecialCharacters = ["\\","^","$",".","|","?","*","+"]
+
 def strSearch(str):
+    regex = str
     """prepend case insensitive flag and append wildcare for regex"""
-    return "(?i)" + str + ".*"
+    for char in regexSpecialCharacters: #protect against special characters
+        if(char in regex):
+            print("found {}".format(char))
+            regex = regex.replace(char, "\{}".format(char))
+    return "(?i).*" + regex + ".*"
 
 class dataStore():
     def __init__(self):
