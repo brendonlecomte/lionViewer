@@ -9,6 +9,7 @@ schoolsOfMagic = {'A': 'Abjuration',
 
 def convertToSpell(obj):
     str =""""""
+    print(obj)
     if(obj.get('name') is not None):
         str += "<b>{}</b> <br/>".format(obj['name'])
     if(obj.get('level') is not None):
@@ -23,11 +24,7 @@ def convertToSpell(obj):
         str += "<b>Component</b>: {} <br/>".format(obj['component'])
     if(obj.get('duration') is not None):
         str += "<b>Duration</b>: {} <br/>".format(obj['duration'])
-    if(obj.get('text') is not None):
-        for chunk in obj['text']:
-            if(chunk is not None):
-                str += "{}<br/><br/>".format(chunk)
-    str += _roll(obj)
+    str += _text(obj)
     return str
 
 def convertToMonster(obj):
@@ -39,10 +36,7 @@ def convertToMonster(obj):
     str += _traits(obj)
     str += _actions(obj)
 
-    if(obj.get('text') is not None):
-        for chunk in obj['text']:
-            if(chunk is not None):
-                str += "{}<br/><br/>".format(chunk)
+    str += _text(obj)
     return str
 
 def convertToItem(obj):
@@ -53,7 +47,7 @@ def convertToItem(obj):
         str += "<b>Magical</b><br/>"
     if(obj.get('value') is not None):
         str += "<b>Value</b>: {} <br/>".format(obj['value'])
-    str +=  _text(obj.get('text'))
+    str +=  _text(obj)
     return str
 
 def _statBlock(obj):

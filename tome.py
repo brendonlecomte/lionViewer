@@ -71,6 +71,8 @@ class GMWindow(QWidget):
 
     def initUI(self):
         self.resize(500, 500)
+        screen = QDesktopWidget().screenGeometry()
+        # self.setMaximumSize(screen.width()/2,screen.height()/2) #reconsider this....
         self.center()
         self.layout = QHBoxLayout(self)
         self.setWindowTitle("World Viewer")
@@ -117,7 +119,8 @@ class GMWindow(QWidget):
             self.dataTabView.closeCurrent()
             
 if __name__ == '__main__':
-    app = QApplication(sys.argv) #QT application        
+    app = QApplication(sys.argv) #QT application  
+    app.setWindowIcon(QIcon('icon_tome.ico'))      
     gmMainWindow = GMWindow() #view
 
 
