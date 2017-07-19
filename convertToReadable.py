@@ -68,15 +68,19 @@ def _statBlock(obj):
     str += "</p>"
     return str    
 
-def _text(text):
-    str = """"""
-    if(isinstance(text, list)):
-        for line in text:
-            if(line is not None):
-                str += "{}<br/>".format(line)
-    else:
-        str += "{} <br/>".format(text)
-    return str
+def _text(obj):
+    str = """<p>"""
+    print(obj)
+    if(obj.get('text') is not None):
+        text = obj['text']
+        if(isinstance(text, list)):
+            for line in text:
+                if(line is not None):
+                    str += "{}<br/>".format(line)
+        else:
+            str += "{} <br/>".format(text)
+    print(str)
+    return str +"</p>"
 
 def _roll(obj):
     str = """<p><b>Rolls</b>:"""
@@ -107,7 +111,7 @@ def _traits(obj):
 def _trait(trait):
     str ="""<p>"""
     str += "<b>{}</b><br/>".format(trait['name'])
-    str += _text(trait['text'])
+    str += _text(trait)
     str+= "</p>"
     return str
 
@@ -126,7 +130,7 @@ def _actions(obj):
 def _action(action):
     str ="""<p>"""
     str += "<b>{}</b><br/>".format(action['name'])
-    str += _text(action['text'])
+    str += _text(action)
     if(action.get('attack' is not None)):
         str += "{}".format(action['attack'])
     str+= "</p>"

@@ -75,7 +75,7 @@ class GMWindow(QWidget):
         # self.setMaximumSize(screen.width()/2,screen.height()/2) #reconsider this....
         self.center()
         self.layout = QHBoxLayout(self)
-        self.setWindowTitle("World Viewer")
+        self.setWindowTitle("Tome of Knowledge")
         self.dbTreeView = treeView()
         self.layout.addWidget(self.dbTreeView)
 
