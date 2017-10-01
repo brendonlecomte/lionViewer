@@ -1,15 +1,72 @@
 schoolsOfMagic = {'A': 'Abjuration',
                   'T': 'Transmutation',
                   'EV': 'Evocation',
-                  'EN': 'Ennnn',
+                  'EN': 'Enchantment',
                   'D': 'Divination',
                   'C': 'Cantrip',
                   'N': 'Necromancy',
                   'I': 'Illusion'}
 
+level_tags = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20']
+
+def convertToFeat(obj):
+    str =""""""
+    if(obj.get('name') is not None):
+        str += "<b>{}</b> <br/>".format(obj['name'])
+    str += _text(obj)
+    return str
+
+def convertToRace(obj):
+    str =""""""
+    if(obj.get('name') is not None):
+        str += "<b>{}</b> <br/>".format(obj['name'])
+    if(obj.get('size') is not None):
+        str += "<b>Size:</b> {} <br/>".format(obj['size'])
+    if(obj.get('speed') is not None):
+        str += "<b>Speed:</b> {} <br/>".format(obj['speed'])
+    if(obj.get('ability') is not None):
+        str += "<b>Stats:</b> {} <br/>".format(obj['ability'])
+    str += _traits(obj)
+    str += _text(obj)
+    return str
+
+def convertToBackground(obj):
+    str =""""""
+    if(obj.get('name') is not None):
+        str += "<b>{}</b> <br/>".format(obj['name'])
+    str += _traits(obj)
+    str += _text(obj)
+    return str
+
+def convertToClass(obj):
+    # print(obj)s
+    str =""""""
+    if(obj.get('name') is not None):
+        str += "<b>{}</b> <br/>".format(obj['name'])
+    if(obj.get('hd') is not None):
+        str += "<b>Hit Dice:</b> 1d{} <br/>".format(obj['hd'])
+    if(obj.get('proficiency') is not None):
+        str += "<b>Saving Throws:</b> {} <br/>".format(obj['proficiency'])
+    for lvl in level_tags:
+        print("{}".format( lvl))
+        # str += "------------- Level {} --------------".format(lvl)
+        for x in obj['autolevel']:
+            if(obj.get('@level') is not None):
+                l = obj['@level']
+                print("{} - {}".format(l, lvl))
+                if(l is not lvl):
+                    continue
+            
+            if(x.get('slots') is not None):
+                str += x['slots']
+            elif(x.get('feature') is not None):
+                str += _feature(x)
+        # "-------------------------------------"
+    str += _text(obj)
+    return str
+
 def convertToSpell(obj):
     str =""""""
-    print(obj)
     if(obj.get('name') is not None):
         str += "<b>{}</b> <br/>".format(obj['name'])
     if(obj.get('level') is not None):
@@ -50,6 +107,20 @@ def convertToItem(obj):
     str +=  _text(obj)
     return str
 
+def _feature(obj):
+    str = """<p>"""
+    if(obj.get('feature') is not None):
+        features = obj['feature']
+        for f in features:
+            try:
+                if(f.get('name') is not None):
+                    str += "<b>{}</b> <br/>".format(f['name'])
+                str += _text(f)
+            except:
+                pass
+    str += "</p>"
+    return str
+
 def _statBlock(obj):
     str = """<p>"""
 
@@ -70,7 +141,6 @@ def _statBlock(obj):
 
 def _text(obj):
     str = """<p>"""
-    print(obj)
     if(obj.get('text') is not None):
         text = obj['text']
         if(isinstance(text, list)):
@@ -79,7 +149,6 @@ def _text(obj):
                     str += "{}<br/>".format(line)
         else:
             str += "{} <br/>".format(text)
-    print(str)
     return str +"</p>"
 
 def _roll(obj):
@@ -110,7 +179,7 @@ def _traits(obj):
 
 def _trait(trait):
     str ="""<p>"""
-    str += "<b>{}</b><br/>".format(trait['name'])
+    str += "<b>{}:</b>".format(trait['name'])
     str += _text(trait)
     str+= "</p>"
     return str
@@ -135,3 +204,7 @@ def _action(action):
         str += "{}".format(action['attack'])
     str+= "</p>"
     return str
+
+if __name__ == '__main__':
+    t =  {'feature': [{'name': 'Starting Proficiencies','text': ['You are proficient with the following items, in addition to any proficiencies provided by your race or background.', 'Armor: light armor, medium armor, shields', 'Weapons: simple weapons, martial weapons', 'Tools: none', 'Skills: Choose two from Animal Handling, Athletics, Intimidation, Nature, Perception, and Survival']},{'name': 'Starting Equipment', 'text': ['You start with the following items, plus anything provided by your background.', None, '• (a) a greataxe or (b) any martial melee weapon', '• (a) two handaxes or (b) any simple weapon', "• An explorer's pack, and four javelins", None, 'Alternatively, you may start with 2d4 x 10 gp to buy your own equipment.']}]}
+    print(_feature(t))

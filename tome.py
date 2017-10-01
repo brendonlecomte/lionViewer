@@ -3,11 +3,28 @@ import sys
 import json
 from datastore import dataStore
 from treeUI import treeGroup, treeItem, treeView
-from convertToReadable import convertToItem, convertToMonster, convertToSpell
+from convertToReadable import *
 from tabUI import tabManager
 from PyQt5.QtCore import QObject
 from PyQt5.QtWidgets import QApplication, QDesktopWidget, QWidget, QHBoxLayout
 from PyQt5.QtGui import QPixmap, QIcon
+
+types={"Races":'race',
+        "Spells":'spell',
+        "Items":'item',
+        "Classes":'class',
+        "Feats":'feat',
+        "Monsters":'monster',
+        "Backgrounds":'background'
+        }
+
+conversions = {'item':convertToItem,
+                'monster':convertToMonster,
+                'spell':convertToSpell,
+                'race' : convertToRace,
+                'background': convertToBackground,
+                'feat':convertToFeat,
+                'class':convertToClass}
 
 class Controller(QObject):
     """interface between DB and the UI"""
@@ -15,24 +32,21 @@ class Controller(QObject):
         super().__init__()
         self.warehouse = dataStore()
 
-    def getObject(self, name):
+    def getObject(self, t, name):
         """gets an exact named object"""
-        obj = self.warehouse.getNamed(name)
-        return obj
+        return self.warehouse.findByType(t, name)
+
+    def getExact(self, t, name):
+        return self.warehouse.getNamed(t, name)
 
     def convertToUI(self, obj):
-        if(obj[0]['object_type'] == 'item'):
-            text = convertToItem(obj[0])
-        elif(obj[0]['object_type'] == 'monster'):
-            text = convertToMonster(obj[0])
-        elif(obj[0]['object_type'] == 'spell'):
-            text = convertToSpell(obj[0])
-        else:
-            text = json.dumps(obj[0])
+        if(len(obj) == 0):
+            return ""
+        text = conversions[obj[0]['object_type']](obj[0])
         return text
 
     def search(self, name):
-        return self.warehouse.findByName(name)
+        return self.warehouse.findByName("*",name)
 
     def getItems(self):
         return self.warehouse.findByType("item")
@@ -42,6 +56,19 @@ class Controller(QObject):
 
     def getMonsters(self):
         return self.warehouse.findByType("monster")
+    
+    def getRaces(self):
+        return self.warehouse.findByType("race")
+    
+    def getFeats(self):
+        return self.warehouse.findByType("feat")
+    
+    def getBackgrounds(self):
+        return self.warehouse.findByType("background")
+    
+    def getClasses(self):
+        clss = self.warehouse.findByType("class")
+        return clss
 
 
 class GMWindow(QWidget):
@@ -65,6 +92,22 @@ class GMWindow(QWidget):
         print("Spells found: {}".format(len(spells)))
         self.addToTree(self.spellGroup, spells)
 
+        races = self.controller.getRaces()
+        print("Races found: {}".format(len(races)))
+        self.addToTree(self.raceGroup, races)
+
+        feats = self.controller.getFeats()
+        print("Feats found: {}".format(len(feats)))
+        self.addToTree(self.featGroup, feats)
+
+        backgrounds = self.controller.getBackgrounds()
+        print("Backgrounds found: {}".format(len(backgrounds)))
+        self.addToTree(self.backgroundGroup, backgrounds)
+
+        classes = self.controller.getClasses()
+        print("Classes found: {}".format(len(classes)))
+        self.addToTree(self.classGroup, classes)
+
     def addToTree(self, group, items):
         for item in items:
             treeItem(group, item['name'])
@@ -83,12 +126,20 @@ class GMWindow(QWidget):
         self.itemGroup = treeGroup("Items")
         self.monsterGroup = treeGroup("Monsters")
         self.spellGroup = treeGroup("Spells")
+        self.raceGroup = treeGroup("Races")
+        self.backgroundGroup = treeGroup("Backgrounds")
+        self.featGroup = treeGroup("Feats")
+        self.classGroup = treeGroup("Classes")
 
         self.initTrees()
         self.dbTreeView.addGroup(self.seachOption)
         self.dbTreeView.addGroup(self.monsterGroup)
         self.dbTreeView.addGroup(self.itemGroup)
         self.dbTreeView.addGroup(self.spellGroup)
+        self.dbTreeView.addGroup(self.raceGroup)
+        self.dbTreeView.addGroup(self.backgroundGroup)
+        self.dbTreeView.addGroup(self.featGroup)
+        self.dbTreeView.addGroup(self.classGroup)
 
         self.dataTabView = tabManager(self.controller)
         self.layout.addWidget(self.dataTabView)
@@ -106,7 +157,8 @@ class GMWindow(QWidget):
         if(item.type() == 1002):
             name = item.text(0)
             parent = item.parent().text(0)
-            obj = self.controller.getObject(name)
+            selectedType = types[parent]
+            obj = self.controller.getObject(selectedType,name)
             text = self.controller.convertToUI(obj)
             self.dataTabView.openTab(name, text)
 

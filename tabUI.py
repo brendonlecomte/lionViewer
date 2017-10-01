@@ -38,12 +38,13 @@ class searchTab(QWidget):
         self.searchResult.clear()
         if text is not "":
             res = self.parent.controller.search(text)
+            # print(res)
             for i in res:
-                self.searchResult.addItem(i['name'])
+                self.searchResult.addItem(i['object_type']+":"+i['name'])
 
     def _open(self):
-        name = self.searchResult.currentItem().text()
-        obj = self.parent.controller.getObject(name)
+        group, name = self.searchResult.currentItem().text().split(':')
+        obj = self.parent.controller.getExact(group, name)
         text = self.parent.controller.convertToUI(obj)
         self.parent.openTab(name, text)
 
