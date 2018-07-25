@@ -1,30 +1,33 @@
 #!/python
 import sys
-import json
 from datastore import dataStore
 from treeUI import treeGroup, treeItem, treeView
-from convertToReadable import *
+from convertToReadable import convertToItem, convertToMonster, \
+                                convertToSpell, convertToRace, \
+                                convertToBackground, convertToFeat, \
+                                convertToClass
 from tabUI import tabManager
 from PyQt5.QtCore import QObject
 from PyQt5.QtWidgets import QApplication, QDesktopWidget, QWidget, QHBoxLayout
-from PyQt5.QtGui import QPixmap, QIcon
+from PyQt5.QtGui import QIcon
 
-types={"Races":'race',
-        "Spells":'spell',
-        "Items":'item',
-        "Classes":'class',
-        "Feats":'feat',
-        "Monsters":'monster',
-        "Backgrounds":'background'
-        }
+types = {"Races": 'race',
+         "Spells": 'spell',
+         "Items": 'item',
+         "Classes": 'class',
+         "Feats": 'feat',
+         "Monsters": 'monster',
+         "Backgrounds": 'background'
+         }
 
-conversions = {'item':convertToItem,
-                'monster':convertToMonster,
-                'spell':convertToSpell,
-                'race' : convertToRace,
-                'background': convertToBackground,
-                'feat':convertToFeat,
-                'class':convertToClass}
+conversions = {'item': convertToItem,
+               'monster': convertToMonster,
+               'spell': convertToSpell,
+               'race': convertToRace,
+               'background': convertToBackground,
+               'feat': convertToFeat,
+               'class': convertToClass}
+
 
 class Controller(QObject):
     """interface between DB and the UI"""
@@ -46,7 +49,7 @@ class Controller(QObject):
         return text
 
     def search(self, name):
-        return self.warehouse.findByName("*",name)
+        return self.warehouse.findByName("*", name)
 
     def getItems(self):
         return self.warehouse.findByType("item")
@@ -56,16 +59,16 @@ class Controller(QObject):
 
     def getMonsters(self):
         return self.warehouse.findByType("monster")
-    
+
     def getRaces(self):
         return self.warehouse.findByType("race")
-    
+
     def getFeats(self):
         return self.warehouse.findByType("feat")
-    
+
     def getBackgrounds(self):
         return self.warehouse.findByType("background")
-    
+
     def getClasses(self):
         clss = self.warehouse.findByType("class")
         return clss
@@ -74,11 +77,10 @@ class Controller(QObject):
 class GMWindow(QWidget):
     def __init__(self):
         super().__init__()
-        self.controller = Controller() #controller
+        self.controller = Controller()  # controller
         self.initUI()
         self.dbTreeView.itemDoubleClicked.connect(self.openItem)
 
-    
     def initTrees(self):
         items = self.controller.getItems()
         print("Items found: {}".format(len(items)))
@@ -114,15 +116,12 @@ class GMWindow(QWidget):
 
     def initUI(self):
         self.resize(500, 500)
-        screen = QDesktopWidget().screenGeometry()
-        # self.setMaximumSize(screen.width()/2,screen.height()/2) #reconsider this....
         self.center()
         self.layout = QHBoxLayout(self)
         self.setWindowTitle("Tome of Knowledge")
         self.dbTreeView = treeView()
         self.layout.addWidget(self.dbTreeView)
-
-        self.seachOption = treeItem(None,"Search",type=1003)
+        self.seachOption = treeItem(None, "Search", type=1003)
         self.itemGroup = treeGroup("Items")
         self.monsterGroup = treeGroup("Monsters")
         self.spellGroup = treeGroup("Spells")
@@ -143,8 +142,8 @@ class GMWindow(QWidget):
 
         self.dataTabView = tabManager(self.controller)
         self.layout.addWidget(self.dataTabView)
-        self.layout.setStretch(0,10)
-        self.layout.setStretch(1,40)
+        self.layout.setStretch(0, 10)
+        self.layout.setStretch(1, 40)
         self.show()
 
     def center(self):
@@ -153,27 +152,26 @@ class GMWindow(QWidget):
         qr.moveCenter(cp)
         self.move(qr.topLeft())
 
-    def openItem(self,item, column):
+    def openItem(self, item, column):
         if(item.type() == 1002):
             name = item.text(0)
             parent = item.parent().text(0)
             selectedType = types[parent]
-            obj = self.controller.getObject(selectedType,name)
+            obj = self.controller.getObject(selectedType, name)
             text = self.controller.convertToUI(obj)
             self.dataTabView.openTab(name, text)
 
-        if(item.type() == 1003): #open search tab
+        if(item.type() == 1003):  # open search tab
             self.dataTabView.openSearch()
 
     def keyPressEvent(self, event):
         # print("Key pressed {} ".format(event.key()))
         if(event.key() == 87):
             self.dataTabView.closeCurrent()
-            
+
+
 if __name__ == '__main__':
-    app = QApplication(sys.argv) #QT application  
-    app.setWindowIcon(QIcon('icon_tome.ico'))      
-    gmMainWindow = GMWindow() #view
-
-
+    app = QApplication(sys.argv)  # QT application
+    app.setWindowIcon(QIcon('icon_tome.ico'))
+    gmMainWindow = GMWindow()  # view
     sys.exit(app.exec_())

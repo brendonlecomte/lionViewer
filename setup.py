@@ -8,7 +8,7 @@ Usage:
 from setuptools import setup
 
 APP = ['tome.py']
-DATA_FILES = ["data/data.json","icon_tome.ico"]
+DATA_FILES = ["data/data.json", "icon_tome.ico"]
 OPTIONS = {}
 
 setup(
